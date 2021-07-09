@@ -18,7 +18,7 @@ export class OuthstravaComponent implements OnInit {
 
   ngOnInit(): void {
     this._activatedRoutes.url.subscribe((url) => {
-      this.emailId = url[1].path;
+      this.emailId = url[1]?.path;
     });
     this._activatedRoutes.queryParams.subscribe((params) => {
       this._stravaServices.client_code = params['code'];

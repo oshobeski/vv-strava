@@ -16,7 +16,7 @@
 //   });
 
 //   it('should verify title name match', () => {
-//     expect(app.title).toEqual('training');
+//     expect(app.title).toEqual('strava-vv');
 //   });
 
 //   it('should match the welcome title equal', () => {
@@ -24,7 +24,7 @@
 //     fixture.detectChanges();
 //     fixture.whenStable().then(()=>{
 //       let welcomeValue = fixture.nativeElement.querySelector('#welcome').innerHTML;
-//       expect(welcomeValue).toEqual('training');
+//       expect(welcomeValue).toEqual('strava-vv');
 //     })
     
 //   })
@@ -36,7 +36,7 @@
 //     fixture.whenStable().then(() => {
 //       expect(spyon).toHaveBeenCalled();
 //       let welcomeValue = fixture.nativeElement.querySelector('#welcome').innerHTML;
-//       expect(welcomeValue).toEqual('welcome to training');
+//       expect(welcomeValue).toEqual('welcome to strava-vv');
 //       done();
 //     })
 //   })

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/training'),
+      dir: require('path').join(__dirname, './coverage/strava-vv'),
       subdir: '.',
       reporters: [
         { type: 'html' },

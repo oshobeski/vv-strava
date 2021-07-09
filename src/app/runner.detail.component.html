@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Strava Data</h1>
+  <p>
+    <img src={{athlete?.profile}}>
+  </p>
+  <p>
+    <b>Name: </b>{{ athlete?.firstname+' '+athlete?.lastname }} <br />
+    <b>City: </b>{{athlete?.city}}<br />
+    <b>Total Ride Distance So far: </b>{{stats?.all_ride_totals.distance / 1000}} km<br />
+    <b>Total Run Distance So far: </b>{{stats?.all_run_totals.distance / 1000}} km<br />
+    <b>Total Swim Distance So far: </b>{{stats?.all_swim_totals.distance / 1000}} km
+  </p>
+
+  <hr />
+
+  <h1>Daily Activities of July Month:</h1>
+  <!-- {{activities | json}} -->
+  <table class="my-table">
+    <thead class="my-table headers">
+      <tr>
+        <th *ngFor="let column of header">{{column}}</th>
+      </tr>
+    </thead>
+    <tbody class="my-table body">
+      <tr my-active *ngFor="let row of activities; index as rowIndex">
+        <td>{{rowIndex + 1}}</td>
+        <td>{{row.name}}</td>
+        <td>{{row.type}}</td>
+        <td>{{(row.distance / 1000) | number:''}} km</td>
+        <td>{{row.start_date | date:'mediumDate'}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- <h1>Stats:</h1>
+  {{stats | json}} -->
+
+</div>

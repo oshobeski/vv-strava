@@ -1,0 +1,28 @@
+table.my-table {
+    border: none;
+    border-collapse: collapse;
+    width: 60%;
+    text-align: center;
+  }
+  
+  thead.my-table.headers tr th {
+    border: white solid 3px;
+    background-color: rgb(0, 100, 139);
+    color: white;
+    height: 25px;
+  }
+  
+  tbody.my-table.body tr td {
+    border: black solid 1px;
+    border-left: none;
+    height: 25px;
+  }
+  
+  tbody.my-table.body tr td.last {
+    border-right: none;
+  }
+  
+  tbody.my-table.body tr.active {
+    background-color: gainsboro;
+    cursor: pointer;
+  }
